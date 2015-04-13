@@ -1,1 +1,9 @@
 D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.Resources.resources
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
