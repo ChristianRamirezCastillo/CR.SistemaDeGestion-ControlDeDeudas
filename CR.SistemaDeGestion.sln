@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CapaDatos", "CapaDatos\CapaDatos.vbproj", "{95DACD10-FBCC-4534-8312-77BA86B16FB1}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CR.CapaDatos", "CapaDatos\CR.CapaDatos.vbproj", "{95DACD10-FBCC-4534-8312-77BA86B16FB1}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CapaLogica", "CapaLogica\CapaLogica.vbproj", "{8289BA07-B0E0-43C5-A8DD-2224BBDB321E}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CR.CapaLogica", "CapaLogica\CR.CapaLogica.vbproj", "{8289BA07-B0E0-43C5-A8DD-2224BBDB321E}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CapaEntidades", "CapaEntidades\CapaEntidades.vbproj", "{95215310-9ABE-4994-87AD-E3DBE9DF147A}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CR.CapaEntidades", "CapaEntidades\CR.CapaEntidades.vbproj", "{95215310-9ABE-4994-87AD-E3DBE9DF147A}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.vbproj", "{0F8E0A14-FEAB-4164-B9C5-94BA83EAC852}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CR.CapaPresentacion", "CapaPresentacion\CR.CapaPresentacion.vbproj", "{0F8E0A14-FEAB-4164-B9C5-94BA83EAC852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
