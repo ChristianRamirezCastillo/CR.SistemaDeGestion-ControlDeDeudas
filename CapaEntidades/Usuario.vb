@@ -6,17 +6,22 @@ Public Class Usuario
     Private _Password As String
     Private _Empleado As Empleado
 
+#Region "Constructor"
     Sub New(login As String, password As String, empleado As Empleado,
-            codigoNivelAcceso As String, nivel As String)
-        MyBase.New(CodigoNivelAcceso, Nivel)
+           codigoNivelAcceso As String, nivel As String)
+        MyBase.New(codigoNivelAcceso, nivel)
 
         login = Me.Login
         password = Me.Password
         empleado = Me.Empleado
-        CodigoNivelAcceso = Me.CodigoNivelAcceso
-        Nivel = Me.Nivel
+        codigoNivelAcceso = Me.CodigoNivelAcceso
+        nivel = Me.Nivel
     End Sub
+    Sub New()
+    End Sub
+#End Region
 
+#Region "Propiedades"
     Public Property Empleado As Empleado
         Get
             Return _Empleado
@@ -41,5 +46,6 @@ Public Class Usuario
             _Password = value
         End Set
     End Property
+#End Region
 
 End Class
