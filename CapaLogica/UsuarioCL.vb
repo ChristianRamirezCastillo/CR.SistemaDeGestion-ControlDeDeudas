@@ -13,10 +13,7 @@ Public Class UsuarioCL
             _listUsuario = value
         End Set
     End Property
-
-
     Public Function Listar() As DataTable
         Return usuarioCD.Listar()
     End Function
-
 End Class

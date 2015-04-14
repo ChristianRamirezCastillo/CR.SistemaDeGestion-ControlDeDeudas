@@ -11,4 +11,7 @@ Public Class LoginCL
     Public Function LoginValidarPassword(_usuario As Usuario) As Boolean
         Return login.LoginValidarPassword(_usuario)
     End Function
+    Public Function LoginDatosUsuario(_usuario As Usuario) As DataTable
+        Return login.LoginDatosUsuario(_usuario)
+    End Function
 End Class

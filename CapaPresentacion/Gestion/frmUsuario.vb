@@ -16,7 +16,8 @@ Public Class frmUsuario
 
 #Region "Eventos"
     Private Sub frmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Inicializar(Me, "Formulario de Usuario")
+        InicializarFormulario(Me, "Formulario de Usuario", Windows.Forms.FormBorderStyle.FixedSingle,
+                              False, FormWindowState.Normal)
         Listar()
     End Sub
 #End Region

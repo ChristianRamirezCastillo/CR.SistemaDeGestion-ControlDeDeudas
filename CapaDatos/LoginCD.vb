@@ -46,4 +46,20 @@ Public Class LoginCD
             Return False
         End Try
     End Function
+    Public Function LoginDatosUsuario(_usuario As Usuario) As DataTable
+        Try
+            Dim par(1) As SqlParameter
+            Dim dt As New DataTable
+
+            par(0) = New SqlParameter("@login", SqlDbType.VarChar) With {.Value = _usuario.Login}
+            par(1) = New SqlParameter("@password", SqlDbType.VarChar) With {.Value = _usuario.Password}
+
+            dt = metodoDatos.sqlListar("spLogin_DatosUsuario", par)
+            Return dt
+        Catch ex As SqlException
+            Return Nothing
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class

@@ -5,9 +5,16 @@ Public Class frmLogin
 
     Dim login As New LoginCL()
 
+    Private Sub IniciarTextos()
+        txtUsuario.Clear()
+        txtPassword.Clear()
+    End Sub
+
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        IniciarTextos()
         Me.CenterToScreen()
-        Inicializar(Me, "Acceso al Sistema")
+        InicializarFormulario(Me, "Acceso al Sistema", Windows.Forms.FormBorderStyle.FixedDialog,
+                              False, FormWindowState.Normal)
         txtUsuario.Focus()
     End Sub
 
@@ -29,8 +36,22 @@ Public Class frmLogin
         Else
             'validamos usuario
             If (login.LoginValidarUsuario(usuario) = True) Then
+                'validamos el password
                 If (login.LoginValidarPassword(usuario) = True) Then
+                    'reuperamos los datos del usuario
+                    Dim dt As New DataTable()
+                    dt = login.LoginDatosUsuario(usuario)
+
+                    With frmMenu
+                        .lblUsuario.Text = dt.Rows(0).Item(1)
+                        .lblNivel.Text = dt.Rows(0).Item(2)
+                        .lblIdentificacion.Text = dt.Rows(0).Item(3) & " " & dt.Rows(0).Item(4)
+                    End With
+
                     MensajeInformacion("Bienvenido al Sistema de Gestión")
+                    Me.Hide()
+                    frmMenu.Show()
+                    IniciarTextos()
                 Else
                     txtPassword.Clear()
                     txtPassword.Focus()
