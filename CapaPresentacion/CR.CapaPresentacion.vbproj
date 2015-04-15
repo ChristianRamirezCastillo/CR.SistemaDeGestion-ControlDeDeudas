@@ -45,6 +45,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Imagenes\iconoDeuda.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -72,6 +75,7 @@
   <ItemGroup>
     <Compile Include="Compartido\IniciarFormulario.vb" />
     <Compile Include="Compartido\Mensaje.vb" />
+    <Compile Include="Compartido\Tabla.vb" />
     <Compile Include="Gestion\frmUsuario.Designer.vb">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </Compile>
@@ -150,9 +154,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\avatarLogin.png" />
+    <Content Include="Imagenes\ayuda24x24.png" />
+    <Content Include="Imagenes\buscar16x16.png" />
+    <Content Include="Imagenes\cancelar16x16.png" />
+    <Content Include="Imagenes\editar16x16.png" />
+    <Content Include="Imagenes\eliminar16x16.png" />
     <Content Include="Imagenes\fondoLogin.jpg" />
+    <Content Include="Imagenes\fondoStatusBar.jpg" />
+    <Content Include="Imagenes\gestion24x24.png" />
+    <Content Include="Imagenes\grabar16x16.png" />
+    <Content Include="Imagenes\iconoDeuda.ico" />
+    <Content Include="Imagenes\iconoLogin.ico" />
     <Content Include="Imagenes\ingresar16x16.png" />
     <Content Include="Imagenes\ingresar24x24.png" />
+    <Content Include="Imagenes\nuevo16x16.png" />
+    <Content Include="Imagenes\salir24x24.png" />
+    <Content Include="Imagenes\usuario24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

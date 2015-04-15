@@ -32,10 +32,8 @@ Public Class MetodoDatosCD
     End Function
     Public Function sqlEjecutar(proc As String, par As SqlParameter()) As Boolean
         Try
-            Using cmd As New SqlCommand(proc, conectar())
-                cmd.ExecuteNonQuery()
-                Return True
-            End Using
+            sqlCrearComandoProc(proc, par).ExecuteNonQuery()
+            Return True
         Catch ex As SqlException
             Return False
         Catch ex As Exception

@@ -17,7 +17,17 @@
             .WindowState = windowsState
         End With
     End Sub
-    Public Sub FormularioHijo()
+    Public Sub FormularioHijo(formHijo As Form, formPAdre As Form)
+        With formHijo
+            .MdiParent = formPAdre
+            .StartPosition = FormStartPosition.CenterScreen
+            .BringToFront()
+            .Show()
 
+            If .WindowState = FormWindowState.Minimized Then
+                .WindowState = FormWindowState.Normal
+            End If
+
+        End With
     End Sub
 End Module

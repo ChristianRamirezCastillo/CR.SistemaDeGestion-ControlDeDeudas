@@ -1,0 +1,8 @@
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\bin\Debug\CapaEntidades.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\bin\Debug\CapaEntidades.pdb
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\bin\Debug\CapaEntidades.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\obj\Debug\CapaEntidades.Resources.resources
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\obj\Debug\CR.CapaEntidades.vbproj.GenerateResource.Cache
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\obj\Debug\CapaEntidades.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\obj\Debug\CapaEntidades.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaEntidades\obj\Debug\CapaEntidades.pdb

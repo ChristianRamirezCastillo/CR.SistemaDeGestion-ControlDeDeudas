@@ -1,0 +1,12 @@
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\bin\Debug\CapaDatos.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\bin\Debug\CapaDatos.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\bin\Debug\CapaEntidades.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\bin\Debug\CapaEntidades.pdb
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\bin\Debug\CapaEntidades.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\obj\Debug\CR.CapaDatos.vbprojResolveAssemblyReference.cache
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\obj\Debug\CapaDatos.Resources.resources
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\obj\Debug\CR.CapaDatos.vbproj.GenerateResource.Cache
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\obj\Debug\CapaDatos.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\obj\Debug\CapaDatos.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaDatos\obj\Debug\CapaDatos.pdb

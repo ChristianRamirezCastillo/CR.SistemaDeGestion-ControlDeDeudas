@@ -10,6 +10,7 @@ Public MustInherit Class Persona
     Private _Telefono As String
     Private _Sexo As Sexo
 
+#Region "Constructor"
     Sub New(nombres As String, apellidos As String, direccion As String,
             distrito As Distrito, departamento As Departamento, pais As Pais, telefono As String, sexo As Sexo)
         nombres = Me.Nombres
@@ -21,7 +22,12 @@ Public MustInherit Class Persona
         telefono = Me.Pais
         sexo = Me.Sexo
     End Sub
+    Sub New()
+    End Sub
+#End Region
 
+
+#Region "Propiedades"
     Public Property Nombres() As String
         Get
             Return _Nombres
@@ -86,5 +92,8 @@ Public MustInherit Class Persona
             _Sexo = value
         End Set
     End Property
+#End Region
+
+   
 
 End Class

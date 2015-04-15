@@ -1,0 +1,15 @@
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaLogica.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaLogica.pdb
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaLogica.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaDatos.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaEntidades.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaDatos.pdb
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaDatos.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaEntidades.pdb
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\bin\Debug\CapaEntidades.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\obj\Debug\CR.CapaLogica.vbprojResolveAssemblyReference.cache
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\obj\Debug\CapaLogica.Resources.resources
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\obj\Debug\CR.CapaLogica.vbproj.GenerateResource.Cache
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\obj\Debug\CapaLogica.dll
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\obj\Debug\CapaLogica.xml
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaLogica\obj\Debug\CapaLogica.pdb
