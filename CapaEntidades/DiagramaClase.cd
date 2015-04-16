@@ -102,9 +102,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CapaEntidades.Usuario">
-    <Position X="10.75" Y="0.5" Width="1.5" />
+    <Position X="10.75" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAABAACAAAEAAAAAAAAAAAAAAAAACAAAQAAAACAA=</HashCode>
+      <HashCode>AAAAAABAASAAAEAAAAAAAAAAAAAAAAICAAAQAAAACAA=</HashCode>
       <FileName>Usuario.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

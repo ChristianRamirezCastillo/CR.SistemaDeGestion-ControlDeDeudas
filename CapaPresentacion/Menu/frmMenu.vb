@@ -20,5 +20,8 @@ Public Class frmMenu
         End If
         Application.Exit()
     End Sub
+    Private Sub mnuGestionEmpleado_Click(sender As Object, e As EventArgs) Handles mnuGestionEmpleado.Click
+        FormularioHijo(frmEmpleado, Me)
+    End Sub
 
 End Class

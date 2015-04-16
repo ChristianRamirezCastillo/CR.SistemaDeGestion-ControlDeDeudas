@@ -40,7 +40,7 @@ Public Class frmUsuario
     End Sub
     Private Sub ListarEmpleado()
         Dim dt As New DataTable()
-        dt = Me.empleadoCL.Listar()
+        dt = Me.empleadoCL.ListarCombo()
         With cboEmpleado
             .DropDownStyle = ComboBoxStyle.DropDownList
             .DataSource = dt
@@ -151,7 +151,6 @@ Public Class frmUsuario
             End If
         End If
     End Sub
-
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         Me.usuario.CodigoUsuario = dgvUsuario.Rows(dgvUsuario.CurrentRow.Index).Cells(0).Value
         Me.usuario.Login = dgvUsuario.Rows(dgvUsuario.CurrentRow.Index).Cells(1).Value
@@ -169,17 +168,11 @@ Public Class frmUsuario
         End If
     End Sub
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        'If txtBuscar.Text.Equals("") Then
-        '    MensajeExclamacion("No hay datos para buscar")
-        '    Return
-        'End If
-
         With Me.usuario
             .Login = txtPorUsuario.Text.Trim()
             .Nivel = txtPorNivel.Text.Trim()
         End With
         dgvUsuario.DataSource = Me.usuarioCL.Buscar(Me.usuario, txtPorEmpleado.Text.Trim())
-
     End Sub
 
 #End Region

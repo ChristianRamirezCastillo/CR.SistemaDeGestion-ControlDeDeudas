@@ -42,6 +42,7 @@ Partial Class frmMenu
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.mnuGestionEmpleado = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuMenuPrincipal.SuspendLayout()
         Me.stpMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -66,7 +67,7 @@ Partial Class frmMenu
         '
         'mnuGestion
         '
-        Me.mnuGestion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuGestionUsuario})
+        Me.mnuGestion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuGestionUsuario, Me.mnuGestionEmpleado})
         Me.mnuGestion.ForeColor = System.Drawing.Color.Black
         Me.mnuGestion.Image = CType(resources.GetObject("mnuGestion.Image"), System.Drawing.Image)
         Me.mnuGestion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -78,7 +79,7 @@ Partial Class frmMenu
         '
         Me.mnuGestionUsuario.Name = "mnuGestionUsuario"
         Me.mnuGestionUsuario.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
-        Me.mnuGestionUsuario.Size = New System.Drawing.Size(156, 22)
+        Me.mnuGestionUsuario.Size = New System.Drawing.Size(167, 22)
         Me.mnuGestionUsuario.Text = "Usuario"
         '
         'mnuAyuda
@@ -196,6 +197,13 @@ Partial Class frmMenu
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
         '
+        'mnuGestionEmpleado
+        '
+        Me.mnuGestionEmpleado.Name = "mnuGestionEmpleado"
+        Me.mnuGestionEmpleado.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.mnuGestionEmpleado.Size = New System.Drawing.Size(167, 22)
+        Me.mnuGestionEmpleado.Text = "Empleado"
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -237,4 +245,5 @@ Partial Class frmMenu
     Friend WithEvents mnuAyudaAcercaDe As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuSalir As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents mnuGestionEmpleado As System.Windows.Forms.ToolStripMenuItem
 End Class

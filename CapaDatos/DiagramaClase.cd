@@ -10,7 +10,7 @@
   <Class Name="CapaDatos.UsuarioCD">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAQAAAQAEAAAAAAAAAABgAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>UsuarioCD.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CapaDatos.LoginCD">
-    <Position X="3.25" Y="2.75" Width="2" />
+    <Position X="3.25" Y="3.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAABEAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LoginCD.vb</FileName>
@@ -38,7 +38,7 @@
   <Class Name="CapaDatos.EmpleadoCD">
     <Position X="6.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAEAAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>EmpleadoCD.vb</FileName>
     </TypeIdentifier>
   </Class>

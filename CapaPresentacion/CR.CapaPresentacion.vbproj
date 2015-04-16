@@ -76,6 +76,12 @@
     <Compile Include="Compartido\IniciarFormulario.vb" />
     <Compile Include="Compartido\Mensaje.vb" />
     <Compile Include="Compartido\Tabla.vb" />
+    <Compile Include="Gestion\frmEmpleado.Designer.vb">
+      <DependentUpon>frmEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\frmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gestion\frmUsuario.Designer.vb">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Gestion\frmEmpleado.resx">
+      <DependentUpon>frmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </EmbeddedResource>
