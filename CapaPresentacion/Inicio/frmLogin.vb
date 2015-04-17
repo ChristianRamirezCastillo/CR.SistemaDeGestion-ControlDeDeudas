@@ -5,13 +5,13 @@ Public Class frmLogin
 
     Dim login As New LoginCL()
 
-    Private Sub IniciarTextos()
+    Private Sub LimpiarTextos()
         txtUsuario.Clear()
         txtPassword.Clear()
     End Sub
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        IniciarTextos()
+        LimpiarTextos()
         Me.CenterToScreen()
         InicializarFormulario(Me, "Acceso al Sistema", Windows.Forms.FormBorderStyle.FixedDialog,
                               False, FormWindowState.Normal)
@@ -46,12 +46,13 @@ Public Class frmLogin
                         .lblUsuario.Text = dt.Rows(0).Item(1)
                         .lblNivel.Text = dt.Rows(0).Item(2)
                         .lblIdentificacion.Text = dt.Rows(0).Item(3) & " " & dt.Rows(0).Item(4)
+                        .lblCodigoEmpleado.Text = dt.Rows(0).Item(5)
                     End With
 
                     MensajeInformacion("Bienvenido al Sistema de Gestión")
                     Me.Hide()
                     frmMenu.Show()
-                    IniciarTextos()
+                    LimpiarTextos()
                 Else
                     txtPassword.Clear()
                     txtPassword.Focus()

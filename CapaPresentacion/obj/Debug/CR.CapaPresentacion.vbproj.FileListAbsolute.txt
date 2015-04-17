@@ -21,3 +21,5 @@ D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj
 D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
 D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.frmMenu.resources
 D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.frmEmpleado.resources
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.frmCartera.resources
+D:\CHRIS\TITULACION\2. Proyecto\Desarrollo\SistemaDeGestion\CapaPresentacion\obj\Debug\CapaPresentacion.frmCliente.resources

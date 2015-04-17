@@ -62,12 +62,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco.vb" />
-    <Compile Include="Cliente.vb" />
     <Compile Include="Departamento.vb" />
     <Compile Include="Disitrito.vb" />
     <Compile Include="Empleado.vb" />
-    <Compile Include="Empresa.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -86,7 +83,6 @@
     <Compile Include="NivelAcceso.vb" />
     <Compile Include="Pais.vb" />
     <Compile Include="Persona.vb" />
-    <Compile Include="Producto.vb" />
     <Compile Include="Sexo.vb" />
     <Compile Include="Gestion.vb" />
     <Compile Include="TipoDeudor.vb" />

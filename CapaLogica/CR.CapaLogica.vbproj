@@ -62,6 +62,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BancoCL.vb" />
+    <Compile Include="ClienteCL.vb" />
     <Compile Include="EmpleadoCL.vb" />
     <Compile Include="LoginCL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

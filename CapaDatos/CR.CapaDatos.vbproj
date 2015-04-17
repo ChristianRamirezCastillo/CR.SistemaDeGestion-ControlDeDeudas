@@ -63,6 +63,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BancoCD.vb" />
+    <Compile Include="ClienteCD.vb" />
     <Compile Include="ConexionCD.vb" />
     <Compile Include="EmpleadoCD.vb" />
     <Compile Include="LoginCD.vb" />

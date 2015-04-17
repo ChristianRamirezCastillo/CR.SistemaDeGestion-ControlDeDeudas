@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes\frmCartera.Designer.vb">
+      <DependentUpon>frmCartera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\frmCartera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Compartido\IniciarFormulario.vb" />
     <Compile Include="Compartido\Mensaje.vb" />
     <Compile Include="Compartido\Tabla.vb" />
@@ -117,6 +129,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Clientes\frmCartera.resx">
+      <DependentUpon>frmCartera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -158,9 +176,7 @@
       <Name>CR.CapaLogica</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clientes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Imagenes\avatarLogin.png" />
     <Content Include="Imagenes\ayuda24x24.png" />
@@ -177,6 +193,7 @@
     <Content Include="Imagenes\ingresar16x16.png" />
     <Content Include="Imagenes\ingresar24x24.png" />
     <Content Include="Imagenes\nuevo16x16.png" />
+    <Content Include="Imagenes\refrescar16x16.png" />
     <Content Include="Imagenes\salir24x24.png" />
     <Content Include="Imagenes\usuario24x24.png" />
   </ItemGroup>

@@ -5,12 +5,12 @@ Public Class Gestion
     Private _DeudaPagada As Double
     Private _DeudaRestante As Double
     Private _Empleado As Empleado
-    Private _Cliente As Cliente
-    Private _Producto As Producto
     Private _CodigoGestion As Integer
+    Private _CodigoCliente As Integer
+    Private _CodigoProducto As Integer
 
     Sub New(codigoGestion As Integer, descripcion As String, deudaPagada As Double,
-            deudaRestante As Double, fecha As Date, empleado As Empleado, cliente As Cliente, producto As Producto)
+            deudaRestante As Double, fecha As Date, empleado As Empleado, codigoCliente As Integer, codigoPRoducto As Integer)
 
         codigoGestion = Me.CodigoGestion
         descripcion = Me.Descripcion
@@ -18,8 +18,8 @@ Public Class Gestion
         deudaRestante = Me.DeudaRestante
         fecha = Me.Fecha
         empleado = Me.Empleado
-        cliente = Me.Cliente
-        producto = Me.Producto
+        codigoCliente = Me.CodigoCliente
+        codigoPRoducto = Me.CodigoProducto
     End Sub
 
     Public Property Fecha As Date
@@ -62,28 +62,28 @@ Public Class Gestion
             _Empleado = value
         End Set
     End Property
-    Public Property Cliente As Cliente
-        Get
-            Return _Cliente
-        End Get
-        Set(value As Cliente)
-            _Cliente = value
-        End Set
-    End Property
-    Public Property Producto As Producto
-        Get
-            Return _Producto
-        End Get
-        Set(value As Producto)
-            _Producto = value
-        End Set
-    End Property
     Public Property CodigoGestion As Integer
         Get
             Return _CodigoGestion
         End Get
         Set(value As Integer)
             _CodigoGestion = value
+        End Set
+    End Property
+    Public Property CodigoCliente As Integer
+        Get
+            Return _CodigoCliente
+        End Get
+        Set(value As Integer)
+            _CodigoCliente = value
+        End Set
+    End Property
+    Public Property CodigoProducto As Integer
+        Get
+            Return _CodigoProducto
+        End Get
+        Set(value As Integer)
+            _CodigoProducto = value
         End Set
     End Property
 

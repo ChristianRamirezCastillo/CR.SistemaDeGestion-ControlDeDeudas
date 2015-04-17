@@ -25,14 +25,17 @@ Partial Class frmMenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenu))
         Me.mnuMenuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.mnuClientes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuClientesCartera = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGestion = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGestionUsuario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuGestionEmpleado = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAyuda = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAyudaAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.stpMenu = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblUsuario = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblCodigoEmpleado = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblNivel = New System.Windows.Forms.ToolStripStatusLabel()
@@ -42,7 +45,8 @@ Partial Class frmMenu
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.mnuGestionEmpleado = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuClientesCambiarUsuario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuMenuPrincipal.SuspendLayout()
         Me.stpMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -58,12 +62,20 @@ Partial Class frmMenu
         '
         'mnuClientes
         '
+        Me.mnuClientes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuClientesCambiarUsuario, Me.ToolStripSeparator1, Me.mnuClientesCartera})
         Me.mnuClientes.ForeColor = System.Drawing.Color.Black
         Me.mnuClientes.Image = CType(resources.GetObject("mnuClientes.Image"), System.Drawing.Image)
         Me.mnuClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.mnuClientes.Name = "mnuClientes"
         Me.mnuClientes.Size = New System.Drawing.Size(85, 28)
         Me.mnuClientes.Text = "Clientes"
+        '
+        'mnuClientesCartera
+        '
+        Me.mnuClientesCartera.Name = "mnuClientesCartera"
+        Me.mnuClientesCartera.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.mnuClientesCartera.Size = New System.Drawing.Size(219, 22)
+        Me.mnuClientesCartera.Text = "Cartera de Clientes"
         '
         'mnuGestion
         '
@@ -81,6 +93,13 @@ Partial Class frmMenu
         Me.mnuGestionUsuario.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
         Me.mnuGestionUsuario.Size = New System.Drawing.Size(167, 22)
         Me.mnuGestionUsuario.Text = "Usuario"
+        '
+        'mnuGestionEmpleado
+        '
+        Me.mnuGestionEmpleado.Name = "mnuGestionEmpleado"
+        Me.mnuGestionEmpleado.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.mnuGestionEmpleado.Size = New System.Drawing.Size(167, 22)
+        Me.mnuGestionEmpleado.Text = "Empleado"
         '
         'mnuAyuda
         '
@@ -109,7 +128,7 @@ Partial Class frmMenu
         'stpMenu
         '
         Me.stpMenu.BackgroundImage = CType(resources.GetObject("stpMenu.BackgroundImage"), System.Drawing.Image)
-        Me.stpMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.lblUsuario, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel3, Me.lblNivel, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.lblIdentificacion, Me.ToolStripStatusLabel6, Me.lblFecha})
+        Me.stpMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.lblUsuario, Me.lblCodigoEmpleado, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel3, Me.lblNivel, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.lblIdentificacion, Me.ToolStripStatusLabel6, Me.lblFecha})
         Me.stpMenu.Location = New System.Drawing.Point(0, 415)
         Me.stpMenu.Name = "stpMenu"
         Me.stpMenu.Size = New System.Drawing.Size(791, 22)
@@ -129,6 +148,13 @@ Partial Class frmMenu
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(60, 17)
         Me.lblUsuario.Text = "lblUsuario"
+        '
+        'lblCodigoEmpleado
+        '
+        Me.lblCodigoEmpleado.ForeColor = System.Drawing.Color.White
+        Me.lblCodigoEmpleado.Name = "lblCodigoEmpleado"
+        Me.lblCodigoEmpleado.Size = New System.Drawing.Size(112, 17)
+        Me.lblCodigoEmpleado.Text = "lblCodigoEmpleado"
         '
         'ToolStripStatusLabel2
         '
@@ -176,7 +202,7 @@ Partial Class frmMenu
         '
         Me.ToolStripStatusLabel6.BackgroundImage = CType(resources.GetObject("ToolStripStatusLabel6.BackgroundImage"), System.Drawing.Image)
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(337, 17)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(225, 17)
         Me.ToolStripStatusLabel6.Spring = True
         '
         'lblFecha
@@ -197,18 +223,22 @@ Partial Class frmMenu
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'mnuGestionEmpleado
+        'mnuClientesCambiarUsuario
         '
-        Me.mnuGestionEmpleado.Name = "mnuGestionEmpleado"
-        Me.mnuGestionEmpleado.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.mnuGestionEmpleado.Size = New System.Drawing.Size(167, 22)
-        Me.mnuGestionEmpleado.Text = "Empleado"
+        Me.mnuClientesCambiarUsuario.Name = "mnuClientesCambiarUsuario"
+        Me.mnuClientesCambiarUsuario.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.mnuClientesCambiarUsuario.Size = New System.Drawing.Size(219, 22)
+        Me.mnuClientesCambiarUsuario.Text = "Cambiar de Usuario"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(216, 6)
         '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(791, 437)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.stpMenu)
@@ -246,4 +276,8 @@ Partial Class frmMenu
     Friend WithEvents mnuSalir As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents mnuGestionEmpleado As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mnuClientesCartera As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents lblCodigoEmpleado As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents mnuClientesCambiarUsuario As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
 End Class
