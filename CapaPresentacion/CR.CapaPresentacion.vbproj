@@ -194,6 +194,7 @@
     <Content Include="Imagenes\ingresar24x24.png" />
     <Content Include="Imagenes\nuevo16x16.png" />
     <Content Include="Imagenes\refrescar16x16.png" />
+    <Content Include="Imagenes\regresar16x16.png" />
     <Content Include="Imagenes\salir24x24.png" />
     <Content Include="Imagenes\usuario24x24.png" />
   </ItemGroup>

@@ -47,6 +47,8 @@ Partial Class frmCartera
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblTotalEncontrados = New System.Windows.Forms.Label()
+        Me.txtEmpleado = New System.Windows.Forms.TextBox()
+        Me.lblEmpleado = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvCartera, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,7 +62,7 @@ Partial Class frmCartera
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(385, 80)
+        Me.GroupBox1.Size = New System.Drawing.Size(385, 57)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Criterios de Busqueda"
@@ -68,7 +70,7 @@ Partial Class frmCartera
         'btnFiltrar
         '
         Me.btnFiltrar.Image = CType(resources.GetObject("btnFiltrar.Image"), System.Drawing.Image)
-        Me.btnFiltrar.Location = New System.Drawing.Point(277, 30)
+        Me.btnFiltrar.Location = New System.Drawing.Point(283, 18)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(75, 26)
         Me.btnFiltrar.TabIndex = 9
@@ -79,15 +81,15 @@ Partial Class frmCartera
         'cboBanco
         '
         Me.cboBanco.FormattingEnabled = True
-        Me.cboBanco.Location = New System.Drawing.Point(62, 34)
+        Me.cboBanco.Location = New System.Drawing.Point(60, 22)
         Me.cboBanco.Name = "cboBanco"
-        Me.cboBanco.Size = New System.Drawing.Size(209, 21)
+        Me.cboBanco.Size = New System.Drawing.Size(217, 21)
         Me.cboBanco.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 37)
+        Me.Label1.Location = New System.Drawing.Point(16, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 0
@@ -105,7 +107,7 @@ Partial Class frmCartera
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Location = New System.Drawing.Point(403, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(289, 80)
+        Me.GroupBox2.Size = New System.Drawing.Size(514, 57)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Resultados"
@@ -113,7 +115,7 @@ Partial Class frmCartera
         'lblPromesaPendiente
         '
         Me.lblPromesaPendiente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblPromesaPendiente.Location = New System.Drawing.Point(202, 51)
+        Me.lblPromesaPendiente.Location = New System.Drawing.Point(446, 21)
         Me.lblPromesaPendiente.Name = "lblPromesaPendiente"
         Me.lblPromesaPendiente.Size = New System.Drawing.Size(58, 20)
         Me.lblPromesaPendiente.TabIndex = 7
@@ -123,7 +125,7 @@ Partial Class frmCartera
         'lblInubicable
         '
         Me.lblInubicable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblInubicable.Location = New System.Drawing.Point(84, 51)
+        Me.lblInubicable.Location = New System.Drawing.Point(328, 21)
         Me.lblInubicable.Name = "lblInubicable"
         Me.lblInubicable.Size = New System.Drawing.Size(58, 20)
         Me.lblInubicable.TabIndex = 7
@@ -153,7 +155,7 @@ Partial Class frmCartera
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(148, 55)
+        Me.Label5.Location = New System.Drawing.Point(392, 25)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 13)
         Me.Label5.TabIndex = 3
@@ -162,7 +164,7 @@ Partial Class frmCartera
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 55)
+        Me.Label4.Location = New System.Drawing.Point(266, 25)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 13)
         Me.Label4.TabIndex = 2
@@ -191,14 +193,16 @@ Partial Class frmCartera
         Me.dgvCartera.AllowUserToAddRows = False
         Me.dgvCartera.AllowUserToDeleteRows = False
         Me.dgvCartera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCartera.Location = New System.Drawing.Point(12, 160)
+        Me.dgvCartera.Location = New System.Drawing.Point(12, 137)
         Me.dgvCartera.Name = "dgvCartera"
         Me.dgvCartera.ReadOnly = True
-        Me.dgvCartera.Size = New System.Drawing.Size(680, 343)
+        Me.dgvCartera.Size = New System.Drawing.Size(905, 366)
         Me.dgvCartera.TabIndex = 2
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.txtEmpleado)
+        Me.GroupBox3.Controls.Add(Me.lblEmpleado)
         Me.GroupBox3.Controls.Add(Me.txtApellidos)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.txtNombres)
@@ -206,9 +210,9 @@ Partial Class frmCartera
         Me.GroupBox3.Controls.Add(Me.btnBuscar)
         Me.GroupBox3.Controls.Add(Me.txtNumeroDocumento)
         Me.GroupBox3.Controls.Add(Me.Label6)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 98)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 75)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(680, 56)
+        Me.GroupBox3.Size = New System.Drawing.Size(905, 56)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Buscar Cliente"
@@ -275,7 +279,7 @@ Partial Class frmCartera
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(534, 520)
+        Me.Label7.Location = New System.Drawing.Point(759, 520)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(94, 13)
         Me.Label7.TabIndex = 5
@@ -284,18 +288,34 @@ Partial Class frmCartera
         'lblTotalEncontrados
         '
         Me.lblTotalEncontrados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblTotalEncontrados.Location = New System.Drawing.Point(634, 516)
+        Me.lblTotalEncontrados.Location = New System.Drawing.Point(859, 516)
         Me.lblTotalEncontrados.Name = "lblTotalEncontrados"
         Me.lblTotalEncontrados.Size = New System.Drawing.Size(58, 20)
         Me.lblTotalEncontrados.TabIndex = 6
         Me.lblTotalEncontrados.Text = "0"
         Me.lblTotalEncontrados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'txtEmpleado
+        '
+        Me.txtEmpleado.Location = New System.Drawing.Point(727, 24)
+        Me.txtEmpleado.Name = "txtEmpleado"
+        Me.txtEmpleado.Size = New System.Drawing.Size(168, 20)
+        Me.txtEmpleado.TabIndex = 14
+        '
+        'lblEmpleado
+        '
+        Me.lblEmpleado.AutoSize = True
+        Me.lblEmpleado.Location = New System.Drawing.Point(667, 27)
+        Me.lblEmpleado.Name = "lblEmpleado"
+        Me.lblEmpleado.Size = New System.Drawing.Size(54, 13)
+        Me.lblEmpleado.TabIndex = 13
+        Me.lblEmpleado.Text = "Empleado"
+        '
         'frmCartera
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(707, 545)
+        Me.ClientSize = New System.Drawing.Size(929, 545)
         Me.Controls.Add(Me.lblTotalEncontrados)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.GroupBox3)
@@ -339,4 +359,6 @@ Partial Class frmCartera
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtNombres As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtEmpleado As System.Windows.Forms.TextBox
+    Friend WithEvents lblEmpleado As System.Windows.Forms.Label
 End Class

@@ -4,4 +4,5 @@ Public Enum TipoDeudor
     Cobrado = 1
     Inubicable = 2
     PromesaPendiente = 3
+    NoCobrado = 4
 End Enum

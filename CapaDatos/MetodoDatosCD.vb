@@ -42,5 +42,23 @@ Public Class MetodoDatosCD
             desconectar()
         End Try
     End Function
+    Public Function sqlListarScalar(proc As String, par As SqlParameter()) As String
+        Try
+            Dim valor As Object = sqlCrearComandoProc(proc, par).ExecuteScalar()
+
+            If valor IsNot Nothing Then
+                Return valor.ToString()
+            Else
+                Return Nothing
+            End If
+
+        Catch ex As SqlException
+            Return Nothing
+        Catch ex As Exception
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
 End Class
 

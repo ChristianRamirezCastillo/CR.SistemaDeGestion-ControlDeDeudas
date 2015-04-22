@@ -3,6 +3,19 @@ Public Class frmMenu
 
     Dim cerrar As Boolean
 
+    Private Sub Permisos()
+        If lblNivel.Text <> "Administrador" Then
+            mnuGestion.Visible = False
+            mnuGestionEmpleado.ShortcutKeys = Nothing
+            mnuGestionUsuario.ShortcutKeys = Nothing
+        Else
+            mnuGestion.Visible = True
+            mnuGestion.Enabled = True
+        End If
+
+
+    End Sub
+
     Private Sub frmMenu_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If cerrar = False Then
             If MensajePregunta("¿Esta seguro que desea salir?") = DialogResult.No Then
@@ -18,6 +31,7 @@ Public Class frmMenu
                               Windows.Forms.FormBorderStyle.Sizable, True, FormWindowState.Maximized)
         lblFecha.Text = Format(Today, "dd \de MMMM \del yyyy")
         lblCodigoEmpleado.Visible = False
+        Permisos()
     End Sub
     Private Sub mnuGestionUsuario_Click(sender As Object, e As EventArgs) Handles mnuGestionUsuario.Click
         FormularioHijo(frmUsuario, Me)
@@ -35,7 +49,6 @@ Public Class frmMenu
     Private Sub mnuClientesCartera_Click(sender As Object, e As EventArgs) Handles mnuClientesCartera.Click
         FormularioHijo(frmCartera, Me)
     End Sub
-
     Private Sub mnuClientesCambiarUsuario_Click(sender As Object, e As EventArgs) Handles mnuClientesCambiarUsuario.Click
         If MensajePregunta("¿Es seguro de querer cambiar de usuario?") = Windows.Forms.DialogResult.Yes Then
             Me.Dispose()

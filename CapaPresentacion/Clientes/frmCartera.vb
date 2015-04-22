@@ -9,6 +9,20 @@ Public Class frmCartera
     Dim bancoCL As New BancoCL()
     Dim clienteCL As New ClienteCL()
 
+    Friend colCodigoEmpleado As Integer
+    Friend colCodigoBanco As Integer
+    Friend colBanco As String
+    Friend colEmpleado As String
+    Friend colNumeroDocumento As String
+    Friend colNombres As String
+    Friend colApellidos As String
+    Friend colTelefono As String
+    Friend colDireccion As String
+    Friend colCodigoDistrito As Integer
+    Friend colCodigoDepartamento As Integer
+    Friend colCodigoPais As Integer
+    Friend colCodigoTipoDeudor As Integer
+
 #End Region
 
 
@@ -22,6 +36,7 @@ Public Class frmCartera
         txtNumeroDocumento.Clear()
         txtNombres.Clear()
         txtApellidos.Clear()
+        txtEmpleado.Clear()
     End Sub
     Private Sub ObtenerCantidades()
         Dim sinGestion As Integer
@@ -55,9 +70,9 @@ Public Class frmCartera
         With dgvCartera
             .Columns(0).Visible = False
             .Columns(1).Visible = False
+            .Columns(2).Visible = False
 
             If frmMenu.lblNivel.Text <> "Administrador" Then
-                .Columns(2).Visible = False
                 .Columns(3).Visible = False
             End If
 
@@ -72,12 +87,11 @@ Public Class frmCartera
             .Columns(15).Visible = False
         End With
     End Sub
-    Private Sub ListarTabla()
+    Public Sub ListarTabla()
         Dim dt As New DataTable()
 
         If frmMenu.lblNivel.Text <> "Administrador" Then
             dt = Me.clienteCL.Listar(cboBanco.SelectedIndex + 1, frmMenu.lblCodigoEmpleado.Text)
-            'dt = Me.clienteCL.Listar(cboBanco.SelectedIndex + 1)
         Else
             dt = Me.clienteCL.Listar(cboBanco.SelectedIndex + 1)
         End If
@@ -114,19 +128,19 @@ Public Class frmCartera
         End If
 
         OrdenarColumnas()
-
+        dgvCartera.Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dgvCartera.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
     Private Sub BuscarTabla()
         Dim dt As New DataTable()
+        Dim codigoEmpleado As String = frmMenu.lblCodigoEmpleado.Text
 
         If frmMenu.lblNivel.Text <> "Administrador" Then
-            dt = Me.clienteCL.Buscar(cboBanco.SelectedIndex + 1, frmMenu.lblCodigoEmpleado.Text,
+            dt = Me.clienteCL.Buscar(cboBanco.SelectedIndex + 1, codigoEmpleado,
                                      txtNumeroDocumento.Text, txtNombres.Text, txtApellidos.Text)
-            'dt = Me.clienteCL.Buscar(cboBanco.SelectedIndex + 1, txtNumeroDocumento.Text,
-            '                       txtApellidos.Text, txtApellidos.Text)
         Else
-            dt = Me.clienteCL.Buscar(cboBanco.SelectedIndex + 1, txtNumeroDocumento.Text,
-                                     txtNombres.Text, txtApellidos.Text)
+            dt = Me.clienteCL.Buscar(cboBanco.SelectedIndex + 1, Nothing,
+                                     txtNumeroDocumento.Text, txtNombres.Text, txtApellidos.Text, txtEmpleado.Text)
         End If
 
         dt.Columns.Add("Distrito", GetType(Distrito))
@@ -148,6 +162,8 @@ Public Class frmCartera
 
         dgvCartera.DataSource = dt
         OcultarColumnas()
+        dgvCartera.Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dgvCartera.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
     Private Sub ListarComboBanco()
         Dim dt As New DataTable()
@@ -159,6 +175,15 @@ Public Class frmCartera
             .ValueMember = dt.Columns(0).ToString()
         End With
     End Sub
+    Private Sub Permiso()
+        If frmMenu.lblNivel.Text.Equals("Administrador") Then
+            lblEmpleado.Visible = True
+            txtEmpleado.Visible = True
+        Else
+            lblEmpleado.Visible = False
+            txtEmpleado.Visible = False
+        End If
+    End Sub
 #End Region
 
 
@@ -168,7 +193,7 @@ Public Class frmCartera
                               False, FormWindowState.Normal)
         ListarComboBanco()
         TablaPersonalizar(dgvCartera)
-
+        Permiso()
     End Sub
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         If dgvCartera.Rows.Count.Equals(0) Then
@@ -187,6 +212,31 @@ Public Class frmCartera
     Private Sub txtNumeroDocumento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumeroDocumento.KeyPress
         If Not Char.IsNumber(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
             e.Handled = True
+        End If
+    End Sub
+    Private Sub dgvCartera_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCartera.CellClick
+        If dgvCartera.Rows.Count = 0 Then
+            Return
+        End If
+
+        If e.ColumnIndex = 17 Then
+            With dgvCartera
+                colCodigoEmpleado = .Rows(e.RowIndex).Cells(0).Value.ToString()
+                colCodigoBanco = .Rows(e.RowIndex).Cells(1).Value.ToString()
+                colBanco = .Rows(e.RowIndex).Cells(2).Value.ToString()
+                colEmpleado = .Rows(e.RowIndex).Cells(3).Value.ToString()
+                colNumeroDocumento = .Rows(e.RowIndex).Cells(4).Value.ToString()
+                colNombres = IIf(IsDBNull(.Rows(e.RowIndex).Cells(5).Value.ToString()), "", .Rows(e.RowIndex).Cells(5).Value.ToString())
+                colApellidos = IIf(IsDBNull(.Rows(e.RowIndex).Cells(6).Value.ToString()), "", .Rows(e.RowIndex).Cells(6).Value.ToString())
+                colTelefono = IIf(IsDBNull(.Rows(e.RowIndex).Cells(7).Value.ToString()), "", .Rows(e.RowIndex).Cells(7).Value.ToString())
+                colDireccion = IIf(IsDBNull(.Rows(e.RowIndex).Cells(8).Value.ToString()), "", .Rows(e.RowIndex).Cells(8).Value.ToString())
+                colCodigoDistrito = .Rows(e.RowIndex).Cells(9).Value.ToString()
+                colCodigoDepartamento = .Rows(e.RowIndex).Cells(10).Value.ToString()
+                colCodigoPais = .Rows(e.RowIndex).Cells(11).Value.ToString()
+                colCodigoTipoDeudor = .Rows(e.RowIndex).Cells(12).Value.ToString()
+            End With
+
+            frmCliente.ShowDialog()
         End If
     End Sub
 #End Region

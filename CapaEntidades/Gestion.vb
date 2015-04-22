@@ -4,7 +4,7 @@ Public Class Gestion
     Private _Descripcion As String
     Private _DeudaPagada As Double
     Private _DeudaRestante As Double
-    Private _Empleado As Empleado
+    Private _Empleado As New Empleado
     Private _CodigoGestion As Integer
     Private _CodigoCliente As Integer
     Private _CodigoProducto As Integer
@@ -20,6 +20,9 @@ Public Class Gestion
         empleado = Me.Empleado
         codigoCliente = Me.CodigoCliente
         codigoPRoducto = Me.CodigoProducto
+    End Sub
+    Sub New()
+
     End Sub
 
     Public Property Fecha As Date
