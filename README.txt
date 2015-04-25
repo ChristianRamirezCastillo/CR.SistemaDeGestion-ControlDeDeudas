@@ -48,5 +48,9 @@ El sistema cuenta con el diseño de la base de datos en .jpg y tambien el archivo
 El sistema es de codigo abierto para su mejora.
 El sistema debe ser compartido para todos los interesados en aportar al proyecto usando como sistema de versionado GIT y repositorio GitHub.
 
-Web:
+GitHub:
 https://github.com/ChristianRamirezCastillo/SistemaDeGestion-ControlDeDeudas.git
+
+Youtube:
+https://www.youtube.com/watch?v=watPtmbyzfM&feature=youtu.be
+
