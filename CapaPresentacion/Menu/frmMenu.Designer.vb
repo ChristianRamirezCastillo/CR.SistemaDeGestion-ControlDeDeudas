@@ -25,10 +25,13 @@ Partial Class frmMenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenu))
         Me.mnuMenuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.mnuClientes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuClientesCambiarUsuario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuClientesCartera = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGestion = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGestionUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGestionEmpleado = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuGestionReportes = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAyuda = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAyudaAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSalir = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,8 +48,7 @@ Partial Class frmMenu
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.mnuClientesCambiarUsuario = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuGestionReportesClientes = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuMenuPrincipal.SuspendLayout()
         Me.stpMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -70,6 +72,18 @@ Partial Class frmMenu
         Me.mnuClientes.Size = New System.Drawing.Size(85, 28)
         Me.mnuClientes.Text = "Clientes"
         '
+        'mnuClientesCambiarUsuario
+        '
+        Me.mnuClientesCambiarUsuario.Name = "mnuClientesCambiarUsuario"
+        Me.mnuClientesCambiarUsuario.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.mnuClientesCambiarUsuario.Size = New System.Drawing.Size(219, 22)
+        Me.mnuClientesCambiarUsuario.Text = "Cambiar de Usuario"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(216, 6)
+        '
         'mnuClientesCartera
         '
         Me.mnuClientesCartera.Name = "mnuClientesCartera"
@@ -79,7 +93,7 @@ Partial Class frmMenu
         '
         'mnuGestion
         '
-        Me.mnuGestion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuGestionUsuario, Me.mnuGestionEmpleado})
+        Me.mnuGestion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuGestionUsuario, Me.mnuGestionEmpleado, Me.mnuGestionReportes})
         Me.mnuGestion.ForeColor = System.Drawing.Color.Black
         Me.mnuGestion.Image = CType(resources.GetObject("mnuGestion.Image"), System.Drawing.Image)
         Me.mnuGestion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -100,6 +114,13 @@ Partial Class frmMenu
         Me.mnuGestionEmpleado.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
         Me.mnuGestionEmpleado.Size = New System.Drawing.Size(167, 22)
         Me.mnuGestionEmpleado.Text = "Empleado"
+        '
+        'mnuGestionReportes
+        '
+        Me.mnuGestionReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuGestionReportesClientes})
+        Me.mnuGestionReportes.Name = "mnuGestionReportes"
+        Me.mnuGestionReportes.Size = New System.Drawing.Size(167, 22)
+        Me.mnuGestionReportes.Text = "Reportes"
         '
         'mnuAyuda
         '
@@ -223,17 +244,11 @@ Partial Class frmMenu
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'mnuClientesCambiarUsuario
+        'mnuGestionReportesClientes
         '
-        Me.mnuClientesCambiarUsuario.Name = "mnuClientesCambiarUsuario"
-        Me.mnuClientesCambiarUsuario.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuClientesCambiarUsuario.Size = New System.Drawing.Size(219, 22)
-        Me.mnuClientesCambiarUsuario.Text = "Cambiar de Usuario"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(216, 6)
+        Me.mnuGestionReportesClientes.Name = "mnuGestionReportesClientes"
+        Me.mnuGestionReportesClientes.Size = New System.Drawing.Size(152, 22)
+        Me.mnuGestionReportesClientes.Text = "R. Clientes"
         '
         'frmMenu
         '
@@ -280,4 +295,6 @@ Partial Class frmMenu
     Friend WithEvents lblCodigoEmpleado As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents mnuClientesCambiarUsuario As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents mnuGestionReportes As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mnuGestionReportesClientes As System.Windows.Forms.ToolStripMenuItem
 End Class

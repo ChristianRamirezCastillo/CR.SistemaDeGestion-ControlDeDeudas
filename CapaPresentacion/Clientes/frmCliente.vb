@@ -12,6 +12,7 @@ Public Class frmCliente
 
 
 #Region "Metodos"
+
     Private Sub LimpiarValores()
         lblNombres.Text = ""
         lblApellidos.Text = ""
@@ -41,6 +42,12 @@ Public Class frmCliente
     Private Sub ListarProducto()
         Dim dt As New DataTable()
         dt = Me.clienteCL.ListarProducto(frmCartera.colNumeroDocumento.ToString())
+
+        dt.Columns.Add("Tipo Moneda", GetType(TipoMoneda))
+        For Each row As DataRow In dt.Rows
+            Dim tipoMoneda As Integer = CInt(row(5))
+            row(7) = DirectCast(tipoMoneda, TipoMoneda)
+        Next
 
         With dgvProducto
             .DataSource = dt
@@ -118,6 +125,7 @@ Public Class frmCliente
     Private Sub ListarUltimaGestion()
         lblUltimaGestion.Text = Convert.ToString(Me.gestionCL.ListarUltimaGestion(frmCartera.colNumeroDocumento))
     End Sub
+
 #End Region
 
 
@@ -213,6 +221,7 @@ Public Class frmCliente
         lblResta.Text = CStr(Math.Round(CDbl(lblDeuda.Text) - CDbl(txtPago.Text), 2))
 
     End Sub
+
 #End Region
 
 

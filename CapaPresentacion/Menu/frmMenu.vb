@@ -8,6 +8,7 @@ Public Class frmMenu
             mnuGestion.Visible = False
             mnuGestionEmpleado.ShortcutKeys = Nothing
             mnuGestionUsuario.ShortcutKeys = Nothing
+            mnuGestionReportes.ShortcutKeys = Nothing
         Else
             mnuGestion.Visible = True
             mnuGestion.Enabled = True
@@ -55,5 +56,13 @@ Public Class frmMenu
             frmLogin.Show()
             frmLogin.txtUsuario.Focus()
         End If
+    End Sub
+
+    Private Sub mnuAyudaAcercaDe_Click(sender As Object, e As EventArgs) Handles mnuAyudaAcercaDe.Click
+        frmAcercaDe.ShowDialog()
+    End Sub
+
+    Private Sub mnuGestionReportesClientes_Click(sender As Object, e As EventArgs) Handles mnuGestionReportesClientes.Click
+        FormularioHijo(frmReportes, Me)
     End Sub
 End Class

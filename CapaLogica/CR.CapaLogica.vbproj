@@ -84,6 +84,7 @@
     </Compile>
     <Compile Include="NivelAccesoCL.vb" />
     <Compile Include="ProductoCL.vb" />
+    <Compile Include="ReporteClienteCL.vb" />
     <Compile Include="UsuarioCL.vb" />
   </ItemGroup>
   <ItemGroup>

@@ -49,10 +49,13 @@
     <ApplicationIcon>Imagenes\iconoDeuda.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -73,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayuda\frmAcercaDe.Designer.vb">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ayuda\frmAcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Clientes\frmCartera.Designer.vb">
       <DependentUpon>frmCartera.vb</DependentUpon>
     </Compile>
@@ -85,9 +94,23 @@
     <Compile Include="Clientes\frmCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compartido\IniciarFormulario.vb" />
-    <Compile Include="Compartido\Mensaje.vb" />
-    <Compile Include="Compartido\Tabla.vb" />
+    <Compile Include="DataSet\dsCliente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\dsCliente.vb">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\frmReportes.Designer.vb">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\frmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Compartido\IniciarFormulario.vb" />
+    <Compile Include="_Compartido\Mensaje.vb" />
+    <Compile Include="_Compartido\Tabla.vb" />
     <Compile Include="Gestion\frmEmpleado.Designer.vb">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </Compile>
@@ -129,6 +152,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ayuda\frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\frmCartera.resx">
       <DependentUpon>frmCartera.vb</DependentUpon>
     </EmbeddedResource>
@@ -138,9 +164,13 @@
     <EmbeddedResource Include="Gestion\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestion\frmReportes.resx">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestion\Rdlc\Cliente.rdlc" />
     <EmbeddedResource Include="Inicio\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +185,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet\dsCliente.xsc">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\dsCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCliente.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\dsCliente.xss">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -184,6 +225,7 @@
     <Content Include="Imagenes\cancelar16x16.png" />
     <Content Include="Imagenes\editar16x16.png" />
     <Content Include="Imagenes\eliminar16x16.png" />
+    <Content Include="Imagenes\filtrarReporte16x16.png" />
     <Content Include="Imagenes\fondoLogin.jpg" />
     <Content Include="Imagenes\fondoStatusBar.jpg" />
     <Content Include="Imagenes\gestion24x24.png" />

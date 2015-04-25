@@ -1,4 +1,5 @@
-﻿
+﻿Imports System.Data.SqlClient
+
 Public Class BancoCD
 
     Dim metodoDatos As New MetodoDatosCD()

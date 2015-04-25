@@ -6,7 +6,69 @@ CapaPresentacion
 </name>
 </assembly>
 <members>
-<member name="P:CapaPresentacion.My.Resources.Resources.ResourceManager">
+<member name="T:CapaPresentacion.dsCliente.spReporteCliente_ListarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:CapaPresentacion.dsCliente.spReporteCliente_ListarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:CapaPresentacion.dsCliente.spReporteCliente_ListarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:CapaPresentacion.dsCliente">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:CapaPresentacion.dsClienteTableAdapters.spReporteCliente_ListarTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager.UpdateUpdatedRows(CapaPresentacion.dsCliente,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager.UpdateInsertedRows(CapaPresentacion.dsCliente,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager.UpdateDeletedRows(CapaPresentacion.dsCliente,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager.UpdateAll(CapaPresentacion.dsCliente)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:CapaPresentacion.dsClienteTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="M:CapaPresentacion.IniciarFormulario.InicializarFormulario(System.Windows.Forms.Form,System.String,System.Windows.Forms.FormBorderStyle,System.Boolean,System.Windows.Forms.FormWindowState)">
+	<summary>
+ Metodo para inicializar el formulario
+ </summary>
+	<param name="form">Objeto formulario</param>
+	<param name="titulo">Titulo del formulario</param>
+	<param name="borderStyle">Borde del formlario</param>
+	<param name="maximizeBox">Maximizar el formulario</param>
+	<param name="windowsState">Estado inicial de la ventana del formulario</param>
+	<remarks></remarks>
+</member><member name="P:CapaPresentacion.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -19,16 +81,6 @@ CapaPresentacion
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
-</member><member name="M:CapaPresentacion.IniciarFormulario.InicializarFormulario(System.Windows.Forms.Form,System.String,System.Windows.Forms.FormBorderStyle,System.Boolean,System.Windows.Forms.FormWindowState)">
-	<summary>
- Metodo para inicializar el formulario
- </summary>
-	<param name="form">Objeto formulario</param>
-	<param name="titulo">Titulo del formulario</param>
-	<param name="borderStyle">Borde del formlario</param>
-	<param name="maximizeBox">Maximizar el formulario</param>
-	<param name="windowsState">Estado inicial de la ventana del formulario</param>
-	<remarks></remarks>
 </member>
 </members>
 </doc>

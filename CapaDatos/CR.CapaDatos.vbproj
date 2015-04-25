@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="NivelAccesoCD.vb" />
     <Compile Include="ProductoCD.vb" />
+    <Compile Include="ReporteClienteCD.vb" />
     <Compile Include="UsuarioCD.vb" />
   </ItemGroup>
   <ItemGroup>
